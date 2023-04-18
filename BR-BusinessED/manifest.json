@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+
+    "name": "BloxRain",
+    "description": "Automatically join BloxFlip rains with Chrome Extension.",
+    "version": "5.2.2",
+    "permissions": ["storage"],
+    "host_permissions": ["<all_urls>"],
+    "icons": 
+        {   
+            "48": "logo.png"
+        },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["https://bloxflip.com/*"],
+            "js": ["content_script.js"]
+        }
+    ],
+    "action": {
+        "default_title": "BloxRain",
+        "default_popup": "popup.html"
+    }
+}
